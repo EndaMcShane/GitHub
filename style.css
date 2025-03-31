@@ -1,0 +1,705 @@
+:root {
+  --bgdark: #2d2c28;
+  --green: #9ddc1e;
+  --darkgrn: #254209;
+}
+
+body.dark-mode {
+  transition: background-color 0.5s ease;
+  color: var(--green);
+  /* Default text color */
+}
+
+body {
+  transition: background-color 0.5s ease;
+  color: var(--darkgrn);
+  background-color: antiquewhite;
+}
+
+.dark-mode {
+  background-color: var(--bgdark);
+  color: #ff0000;
+}
+
+/* Toggled colors */
+.dark-mode .green {
+  color: var(--green);
+}
+
+.mode-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.fa-sun,
+.fa-moon:before {
+  color: var(--green);
+}
+
+.fa:hover {
+  opacity: 0.7;
+  color: var(--darkgrn);
+}
+
+.mode-button:hover {
+  opacity: 0.2;
+  color: var(--darkgrn);
+}
+
+a.nav-link:hover {
+  opacity: 0.7;
+  color: var(--green);
+}
+
+a.dark-mode h1 {
+  opacity: 0.2;
+  color: var(--darkgrn);
+}
+
+.fa-twitter,
+.fa-facebook {
+  padding: 20px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: var(--green);
+}
+
+/* navbar style - colour */
+.bg-secondary {
+  background-color: #22211e !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: var(--darkgrn);
+  width: auto;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show>.nav-link :hover {
+  color: var(--green);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--darkgrn);
+  width: auto;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.navbar-light .navbar-nav .nav-link.hover {
+  color: var(--green);
+}
+
+/* styling for order page */
+img.orderlogo{
+  border-radius: 10%;
+  border-style: solid;
+  border: var(--darkgrn);
+  margin-left: 400px;
+  margin-top: -300px;
+}
+
+/* styling for checkout page */
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%;
+  /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%;
+  /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: transparent;
+  padding: 5px 20px 15px 20px;
+  border-radius: 3px;
+}
+
+h3 {
+  counter-reset: --;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btncheck {
+  background-color: var(--green);
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btncheck:hover {
+  background-color: var(--darkgrn);
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+img#biglogo {
+  border-radius: 10%;
+  border-style: solid;
+  border-color: #254209;
+}
+
+.body.dark-mode {
+  color: var(--darkgrn);
+}
+
+div.dark-mode {
+  color: var(--darkgrn);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top 
+of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Styling for the contact form */
+.contact-us {
+  width: 80%;
+  margin: auto;
+}
+
+.contact-details {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.contact-details div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-details div .fa {
+  font-size: 28px;
+  color: #7a7a7a;
+  margin: 10px;
+  margin-right: 30px;
+}
+
+.contact-details div h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.btn.btn-secondary {
+  background-color: #739917c2;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+  padding-right: 0.5rem;
+  padding-left: .5rem;
+  padding-top: 1rem;
+}
+
+.contact-heading {
+  padding: 2%;
+}
+
+.contact-details i.fa.fa {
+  color: #627f1b;
+}
+
+i.fa.fa-arrow-up {
+  color: var(--green);
+}
+
+
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-col div p {
+  padding: 0;
+}
+
+.contact-col div h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 400;
+}
+
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+
+  /* changed z index so doesnt overlap other items */
+  z-index: 100;
+
+  background-color: #22211e;
+  border-color: #9ddc1e5b;
+  color: var(--green);
+}
+
+.circle-button {
+  border-radius: 50%;
+}
+
+/*Styling for order page */
+#food-container {
+  overflow-x: hidden;
+  box-sizing: content-box;
+}
+
+#header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#header .address {
+  font-size: 20px;
+}
+
+.your-address {
+  border: 1px solid var(--green);
+  color: var(--green);
+  padding: 10px 11px;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.add-box i {
+  font-size: 20px;
+}
+
+.util i,
+.user i {
+  font-size: 20px;
+  margin: 0 16px;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: auto;
+  border: 1px solid;
+  color: var(--green);
+  padding: 9px 18px;
+  width: 130px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.util i:active {
+  color: var(--bgdark);
+  background: var(--green);
+}
+
+.food-items {
+  display: none;
+}
+
+#burger,
+#pcarbonara,
+#gbread {
+  margin-top: 40px;
+}
+
+#pcarbonara #item-card,
+#gbread #item-card {
+  background: rgb(34 33 30);
+}
+
+#category-name,
+.item-menu.light-mode {
+  margin: 10px;
+  font-size: 35px;
+}
+
+#item-card {
+  width: 190px;
+  height: 240px;
+  padding: 7px;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  background: rgb(34 33 30);
+  cursor: pointer;
+  transform: 0.5s all ease-in-out;
+}
+
+#item-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 25%;
+  margin: inherit;
+  display: block;
+  margin-bottom: 4px;
+  transition: 0.5s all ease-in-out;
+}
+
+#item-card:hover img {
+  transform: scale(1.1);
+}
+
+#menu-item-name {
+  margin: 5px 0;
+  font-weight: 600;
+  color: var(--green);
+  font-size: 18px;
+}
+
+#item-price {
+  margin: 0;
+  color: var(--green);
+  font-weight: 500;
+  font-size: 19px;
+}
+
+#card-top {
+  display: flex;
+  margin: 5px 0;
+  justify-content: space-between;
+}
+
+#rating {
+  padding: 7px;
+  color: var(--green);
+  background: transparent;
+  border: 1px solid;
+  font-size: 14px;
+  border-radius: 14px;
+}
+
+.fa-heart-o {
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #9ddc1e;
+}
+
+/* css for form validation */
+:required {
+  background-color: #ffffe9;
+}
+
+/* using submitted class so it applies when form is submitted */
+.submitted input:invalid {
+  /* styling for contact form bad input - turns background and border red */
+  border: 2px dashed red;
+}
+
+.submitted input:invalid:required {
+  background-color: rgb(255, 159, 159);
+}
+
+.submitted input:valid:required,
+.submitted input:valid {
+  border: 1px;
+}
+
+.light-mode:hover {
+  background: #000000;
+}
+
+.list-card:hover img {
+  transition: 0.5s all ease-in-out;
+  transform: scale(1.1);
+}
+
+/* used to change css for badinput on form */
+.badInput {
+  background-color: rgb(255, 159, 159);
+}
+
+/* Change body text color in light mode */
+.light-mode body {
+  color: var(--darkgrn);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.menu {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+  font-weight: 900;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 1.5em;
+  border-radius: 10%;
+  border-style: solid;
+  border-color: var(--darkgrn);
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.menu-item-name {
+  margin-right: 1.5em;
+}
+
+.menu-item-description {
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+  .menu {
+    font-size: 16px;
+  }
+
+  .menu-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-item-image {
+    width: 125px;
+    height: 125px;
+  }
+}
+p.cookiemessage{
+  color: var(--green);
+}
+button.signupbtn{
+  border: 1px solid #627f1b;
+  color: white;
+  padding: 7px 11px;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  background: #627f1b;
+}
+
+/* order page */
+.button {
+  border: 1px solid #627f1b;
+  color: #627f1b;
+  padding: 7px 11px;
+  border-radius: 20px;
+  width: 130px;
+  height: 40px;
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bolder;
+  background: transparent;
+}
+
+form.orderform {
+  margin-left: 20px;
+}
+form.signupform {
+  margin-left: 20px;
+  text-align: center;
+}
+
+div#deets.details {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+div#deets.details-td {
+  margin-right: 20px;
+}
+
+.button.dark-mode {
+  color: var(--darkgrn);
+}
+
+#category-name.dark-mode {
+  color: #254209;
+}
+
+/*cookies styling*/
+.container2 {
+  width: 1600px;
+  margin: auto;
+  background: #22211e;
+}
+
+.subcontainer {
+  width: 85%;
+  margin: auto;
+}
+
+#cookies {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #22211e;
+  z-index: 1;
+  /*display: none;*/
+}
+
+.cookies {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  font-weight: bold;
+}
+
+.cookies a {
+  color: #627f1b;
+}
+
+a.aboutbistro {
+  color: #627f1b;
+}
+
+#cookies-btn {
+  border-radius: 5px;
+  padding: 8px 12px 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 3px solid var(--green);
+  background-color: transparent;
+  color: #9ddc1e;
+}
+
+@media (max-width:1600px) {
+  .container {
+    width: 100%;
+  }
+}
+.cta button {
+  background-color: #627f1b;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: var(--darkgrn);
+}
+
+.signupheader{
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+input#username{
+  width: 200px;
+  align-items: center;
+}

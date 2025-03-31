@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- lighthouse suggested to add a meta description -->
+  <meta name="description" content="Code written by Thomas Lavelle and Enda McShane for COM109 Assignment1 2024">
+  
+  <title>Menu Website Template</title>
+
+  <!-- Include Font Awesome CSS --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Bootstrap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script defer src="./script.js"></script>
+
+  <!-- link to our css file -->
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="dark-mode">
+
+  <button type="button" class="btn btn-danger btn-floating btn-lg circle-button" id="btn-back-to-top" onclick="backToTop()">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+    <!-- Responsive navbar that collapses for different screen sizes - used the sticky-top class so that it doesnt move when scrolled -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-secondary nav-colour sticky-top ">
+        <div class="container-fluid ">
+
+          <a href="index.html"><img width="40%" class="navbar-brand" src="content/BushtuckerLogo.jpg"></a>
+            <!-- This is used to fold the navbar into burger on small screen -->
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarID"
+                aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Bootstrap to make navbar collapsable -->
+            <div class="collapse navbar-collapse" id="navbarID">
+
+              <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="contact.html"> Contact</a>
+                <a class="nav-link active" href="menu.html">Menu</a>
+                <a class="nav-link" href="allergens.html">Allergens</a>
+                <a class="nav-link" href="order.html">Order</a>
+                <a class="nav-link" href="aboutus.html">About us</a>
+                <a href="index.html" class="fa fa-facebook"></a>
+                <a href="index.html" class="fa fa-twitter"></a>
+
+                    <!-- Button that toggles the dark mode - aria label used for accessibility -->
+                    <button class="mode-button" aria-label="Dark Mode Button" onclick="toggleMode()">
+                      <i id="icon" class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav></body>
+    <body>
+
+    <div id="food-items">
+      <div id="burger">
+        <p id="category-name">Mains</p>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.shutterstock.com/image-photo/burger-tomateoes-lettuce-pickles-on-600nw-2309539129.jpg"
+            alt="KBurger">
+          <p id="menu-item-name">Kangaroo Burger</p>
+          <p id="item-price">£11</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.shutterstock.com/image-photo/homemade-carbonara-pasta-600nw-1306111060.jpg"
+            alt="Carbonara">
+          <p id="menu-item-name">Carbonara</p>
+          <p id="item-price">£12</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.lakings.co.uk/wp-content/uploads/2021/06/Perfect-Restaurant-Style-Steak-at-home_Support-8-600x400-1.jpg"
+            alt="OutbackSteak">
+          <p id="menu-item-name">Outback Steak</p>
+          <p id="item-price">£18</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.shutterstock.com/image-photo/hot-pizza-bacon-eggs-peppers-600nw-2293927321.jpg"
+            alt="AussiePizza">
+          <p id="menu-item-name">Aussie Pizza</p>
+          <p id="item-price">£14</p>
+        </div>
+      </div>
+      <div id="sides">
+        <p id="category-name">Sides</p>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.shutterstock.com/image-photo/garlic-bread-plate-on-white-600nw-510346945.jpg"
+            alt="GarlicBread">
+          <p id="menu-item-name">Cheesy Garlic Bread</p>
+          <p id="item-price">£5</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o"></i>
+          </div>
+          <img src="https://static01.nyt.com/images/2018/04/09/dining/09COOKING-FRENCHTOASTALMANDINE2/09COOKING-FRENCHTOASTALMANDINE2-articleLarge-v2.jpg"
+            alt="Ftoast">
+          <p id="menu-item-name">French Toast</p>
+          <p id="item-price">£6</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.loveandoliveoil.com/wp-content/uploads/2018/01/chicken-pot-pie-soupH-600x400.jpg"
+            alt="soupoftheday">
+          <p id="menu-item-name">Soup of the day</p>
+          <p id="item-price">£6</p>
+        </div><div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://st3.depositphotos.com/1791505/32174/i/450/depositphotos_321742038-stock-photo-loaded-bacon-ranch-fries.jpg" alt="loadedfries"
+            alt="loadedfries">
+          <p id="menu-item-name">Loaded Fries</p>
+          <p id="item-price">£4</p>
+        </div>
+      </div>
+      <div id="desserts">
+        <p id="category-name">Desserts</p>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.shutterstock.com/image-photo/stack-tasty-chocolate-cookies-on-600nw-1161533905.jpg"
+            alt="Cookies">
+          <p id="menu-item-name">Cookies</p>
+          <p id="item-price">£6</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.shutterstock.com/image-photo/double-chocolate-cookies-dark-chips-600nw-2192419253.jpg"
+            alt="choc">
+          <p id="menu-item-name">Double Choc Cookies</p>
+          <p id="item-price">£6</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSv0NN2cIjLKw-lHFU0nc1q1LIvzlNrY2f-SubNYhlUw&s"
+            alt="icecream">
+          <p id="menu-item-name">Ice Cream</p>
+          <p id="item-price">£5</p>
+        </div><div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://www.shutterstock.com/image-photo/apple-crumble-cake-on-dark-600nw-1817301242.jpg"
+            alt="applecrumble">
+          <p id="menu-item-name">Apple Crumble</p>
+          <p id="item-price">£11</p>
+        </div>
+      </div>
+      <div id="desserts">
+        <p id="category-name">Drinks</p>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://assets.euromoneydigital.com/dims4/default/314c470/2147483647/strip/true/crop/600x400+0+0/resize/840x560!/quality/90/?url=http%3A%2F%2Feuromoney-brightspot.s3.amazonaws.com%2Fd7%2Fe7%2F09ff19458b1bf6c0d6a769d7681e%2Fadobestock-288226064-editorial-use-only.jpeg"
+            alt="Coke">
+          <p id="menu-item-name">CocaCola</p>
+          <p id="item-price">£3</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://st3.depositphotos.com/1063437/13933/i/450/depositphotos_139335930-stock-photo-plastic-bottle-and-can-of.jpg"
+            alt="Fanta">
+          <p id="menu-item-name">Fanta Orange</p>
+          <p id="item-price">£3</p>
+        </div>
+        <div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://snugandcozylife.com/wp-content/uploads/2018/09/Orange-Juice-in-Pitcher-and-Glass-on-a-Tray-600x400.jpg"
+            alt="Juice">
+          <p id="menu-item-name">Jungle Juice</p>
+          <p id="item-price">£2</p>
+        </div><div id="item-card">
+          <div id="card-top">
+            <i class="fa fa-star" id="rating"></i>
+            <i class="fa fa-heart-o add-to-cart"></i>
+          </div>
+          <img src="https://media.istockphoto.com/id/1183424538/photo/water-pouring-into-glass.jpg?s=612x612&w=0&k=20&c=ZEXKV_0eblwFXh_jf4T3kDX_VqYdFmS04lwCVg41NFY="
+            alt="Water">
+          <p id="menu-item-name">Water</p>
+          <p id="item-price">£1</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+      <!-- footer using bootstrap - change background colour maybe -->
+  <div class="container">
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+        </ul>
+        <p class="text-center text-muted">© YEAR Company Name, Inc</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- lighthouse suggested to add a meta description -->
+  <meta name="description" content="Code written by Thomas Lavelle and Enda McShane for COM109 Assignment1 2024">
+  
+  <title>About us  Website Template</title>
+
+  <!-- Include Font Awesome CSS --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Bootstrap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script defer src="./script.js"></script>
+
+  <!-- link to our css file -->
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="dark-mode">
+
+  <button type="button" class="btn btn-danger btn-floating btn-lg circle-button" id="btn-back-to-top" onclick="backToTop()">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+    <!-- Responsive navbar that collapses for different screen sizes - used the sticky-top class so that it doesnt move when scrolled -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-secondary nav-colour sticky-top ">
+        <div class="container-fluid ">
+
+          <a href="index.html"><img width="40%" class="navbar-brand" src="content/BushtuckerLogo.jpg"></a>
+            <!-- This is used to fold the navbar into burger on small screen -->
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarID"
+                aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="darkmode" class="fas fa-sun"></i>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Bootstrap to make navbar collapsable -->
+            <div class="collapse navbar-collapse" id="navbarID">
+
+              <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="contact.html"> Contact</a>
+                <a class="nav-link" href="menu.html">Menu</a>
+                <a class="nav-link" href="allergens.html">Allergens</a>
+                <a class="nav-link" href="order.html">Order</a>
+                <a class="nav-link active" href="aboutus.html">About us</a>
+                <a href="index.html" class="fa fa-facebook"></a>
+                <a href="index.html" class="fa fa-twitter"></a>
+
+                    <!-- Button that toggles the dark mode - aria label used for accessibility -->
+                    <button class="mode-button" aria-label="Dark Mode Button" onclick="toggleMode()">
+                      <i id="icon" class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+<title>Sign up</title>
+</head>
+<body>
+
+<h2 class="signupheader">Sign Up</h2>
+
+<form class="signupform" id="myForm">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <span id="usernameError" class="error"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <button class="signupbtn" type="submit">Submit</button>
+</form>
+
+</body>
+
+</html>

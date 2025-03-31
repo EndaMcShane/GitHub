@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- lighthouse suggested to add a meta description -->
+  <meta name="description" content="Code written by Thomas Lavelle and Enda McShane for COM109 Assignment1 2024">
+
+  <title>Home Website Template</title>
+
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script defer src="script.js"></script>
+
+  <!-- link to our css file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+
+  <button type="button" class="btn btn-danger btn-floating btn-lg circle-button" id="btn-back-to-top"
+    onclick="backToTop()">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Responsive navbar that collapses for different screen sizes - used the sticky-top class so that it doesnt move when scrolled -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-secondary nav-colour sticky-top ">
+    <div class="container-fluid ">
+
+      <a href="index.html"><img width="40%" class="navbar-brand" src="content/BushtuckerLogo.jpg"></a>
+      <!-- This is used to fold the navbar into burger on small screen -->
+      <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarID"
+        aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Bootstrap to make navbar collapsable -->
+      <div class="collapse navbar-collapse" id="navbarID">
+
+        <div class="navbar-nav">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="contact.html"> Contact</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="allergens.html">Allergens</a>
+          <a class="nav-link" href="order.html">Order</a>
+          <a class="nav-link" href="aboutus.html">About us</a>
+          <a href="index.html" class="fa fa-facebook"></a>
+          <a href="index.html" class="fa fa-twitter"></a>
+
+          <!-- Button that toggles the dark mode - aria label used for accessibility -->
+          <button class="mode-button" aria-label="Dark Mode Button" onclick="toggleMode()">
+            <i id="icon" class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Div that contains centeres text with relative positioning -->
+  <div class="position overflow-hidden p-3 p-md-5 m-md-3 text-center bg-transparent">
+
+    <div class="col-md-5 p-lg-1  mx-auto my-4">
+      <h1 class="display-4 font-weight-bolder">Bush Tucker Bistro <br> Home Page</h1>
+      <p class="lead font-weight-normal">Welcome to our website, feel free to browse our menu or learn more about us
+        here.
+        Feel free to contact us with any of your queries on our contact page!
+      </p>
+    </div>
+  </div>
+
+  <!-- Horizontal line to divide the sections -->
+  <hr width="100%">
+
+  <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3">
+
+    <div class="col-lg-6 p-md-5 mx-auto mt-4">
+      <h1 class="display-4 font-weight-normal">About us</h1>
+      <p class="lead font-weight-normal">Welcome to Bush Tucker Bistro, your go-to destination for delicious,
+        locally sourced meals delivered straight to your door. We pride ourselves on crafting mouthwatering dishes
+        that showcase the best of Australian cuisine, all while prioritizing sustainability and supporting our local
+        community. Whether you're craving a hearty breakfast, a wholesome lunch, or a gourmet dinner, Bush Tucker
+        Bistro is here to satisfy your appetite.
+        <br>
+
+        <a class="aboutbistro" href="aboutus.html">Read more</a>
+      </p>
+    </div>
+
+    <div class="col-lg-6 p-md-5 mx-auto text-center">
+      <img id="biglogo" width=100% height="auto" src="content/BushtuckerLogo.jpg" alt="BushtuckerLogo">
+    </div>
+
+  </div>
+
+
+  <!-- footer using bootstrap - change background colour maybe -->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+      </ul>
+      <p class="text-center text-muted">© YEAR Company Name, Inc</p>
+    </footer>
+  </div>
+
+</body>
+<div id="cookies">
+  <div class="container2">
+    <div class="subcontainer">
+      <div class="cookies">
+        <p class="cookiemessage">This website uses cookies to ensure you get the best experience on our website.
+          <a href="https://www.aboutcookies.org/">More info</a>
+        </p>
+        <button id="cookies-btn">Thats Fine!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
